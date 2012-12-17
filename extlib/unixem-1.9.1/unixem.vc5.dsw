@@ -1,0 +1,59 @@
+Microsoft Developer Studio Workspace File, Format Version 5.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "test.scratch.dlfcn"=.\test\test.scratch.dlfcn\vc5\test.scratch.dlfcn.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.mmap"=.\test\test.scratch.mmap\vc5\test.scratch.mmap.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "unixem"=.\build\vc5\unixem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

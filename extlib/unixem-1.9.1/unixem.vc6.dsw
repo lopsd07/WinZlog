@@ -1,0 +1,191 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "doc"=.\doc\vc6\doc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "setenv_test"=.\test\setenv_test\vc6\setenv_test.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.dlfcn"=.\test\test.scratch.dlfcn\vc6\test.scratch.dlfcn.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.fnmatch"=.\src\extras\test.scratch.fnmatch\vc6\test.scratch.fnmatch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "test.scratch.fnmatch_test"=.\test\test.scratch.fnmatch_test\vc6\test.scratch.fnmatch_test.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name test.scratch.fnmatch
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.getrusage"=.\test\test.scratch.getrusage\vc6\test.scratch.getrusage.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.link"=.\test\test.scratch.link\vc6\test.scratch.link.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.mmap"=.\test\test.scratch.mmap\vc6\test.scratch.mmap.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.syslog"=.\test\test.scratch.syslog\vc6\test.scratch.syslog.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.scratch.uio"=.\test\test.scratch.uio\vc6\test.scratch.uio.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "test.unit.unistd.gethostname"=.\test\unit\test.unit.unistd.gethostname\vc6\test.unit.unistd.gethostname.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name unixem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "unixem"=.\build\vc6\unixem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

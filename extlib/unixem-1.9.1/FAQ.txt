@@ -1,0 +1,21 @@
+UNIXem - FAQ
+============
+
+Updated:    22nd April 2008
+
+
+
+The FAQ list is under (constant) development. If you post a question on the
+STLSoft newsgroup (http://www.digitalmars.com/webnews/newsgroups.php?search_txt=&group=c%2B%2B.stlsoft)
+it will be used to create one.
+
+FAQs:
+=====
+
+Q1: "What happens if the I ask a question on the forum?"   [20th February 2008]
+
+A1:
+  It'll be added to the FAQ.
+
+
+=============================== End of file ================================

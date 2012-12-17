@@ -1,0 +1,20 @@
+UNIXem - Authors
+================
+
+Updated:    13th August 2010
+
+
+Authors:
+
+  Matthew Wilson
+
+
+Bug reports, fixes, questions, requests and suggestions (for which we are
+very grateful):
+
+  Marc Treib        - gettimeofday() return type
+
+
+Contributions are welcomed.
+
+=============================== End of file ================================

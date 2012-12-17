@@ -1,0 +1,528 @@
+UNIXem - Changes
+================
+
+Updated:    13th August 2010
+
+
+    ************************************
+    * Change key:                      *
+    *                                  *
+    *  ~  means something has changed  *
+    *  +  means a new addition         *
+    *  -  means removal of something   *
+    *  *  means a general bullet-point *
+    *                                  *
+    ************************************
+
+
+12th August 2010 - 1.9.1
+========================
+
+Summary:
+--------
+
+ * reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+ * 64-bit compatibility fixes
+
+Details:
+--------
+
+General:
+
+ ~ include/asm/atomic.h:
+ ~ include/dirent.h:
+ ~ include/dlfcn.h:
+ ~ include/glob.h:
+ ~ include/sys/mman.h:
+ ~ include/sys/resource.h:
+ ~ include/sys/uio.h:
+ ~ include/unistd.h:
+ ~ include/unixem/internal/util.h:
+ ~ include/sys/time.h:
+    ~ reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+
+ + include/unixem/asm/atomic.h:
+ + include/unixem/dirent.h:
+ + include/unixem/dlfcn.h:
+ + include/unixem/glob.h:
+ + include/unixem/setenv.h:
+ + include/unixem/sys/mman.h:
+ + include/unixem/sys/resource.h:
+ + include/unixem/sys/uio.h:
+ + include/unixem/unistd.h:
+ + include/unixem/sys/time.h:
+    ~ reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+
+ ~ src/atomic.c:
+ ~ src/dirent.c:
+ ~ src/dlfcn.c:
+ ~ src/glob.c:
+ ~ src/hostname.c:
+ ~ src/internal/util.c:
+ ~ src/mmap.c:
+ ~ src/resource.c:
+ ~ src/setenv.c:
+ ~ src/time.c:
+ ~ src/uio.c:
+    ~ reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+
+ ~ src/unistd.c:
+    ~ Win64-compatibility
+    ~ GCC compatibility
+    ~ reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+
+Distribution:
+
+Makefiles / Project-files:
+
+ ~ build/ar/makefile:
+ ~ build/bc55/makefile:
+ ~ build/bc551/makefile:
+ ~ build/bc56/makefile:
+ ~ build/bc564/makefile:
+ ~ build/bc582/makefile:
+ ~ build/bc59x/makefile:
+ ~ build/bc61x/makefile:
+ ~ build/como433/makefile:
+ ~ build/cw7/makefile:
+ ~ build/cw8/makefile:
+ ~ build/dm/makefile:
+ ~ build/gcc295/makefile:
+ ~ build/gcc32/makefile:
+ ~ build/gcc33/makefile:
+ ~ build/icl10/makefile:
+ ~ build/icl11/makefile:
+ ~ build/icl6/makefile:
+ ~ build/icl7/makefile:
+ ~ build/icl8/makefile:
+ ~ build/icl9/makefile:
+ ~ build/makefile.tools.xml:
+ ~ build/ow12/makefile:
+ ~ build/ow13/makefile:
+ ~ build/ow14/makefile:
+ ~ build/ow15/makefile:
+ ~ build/ow16/makefile:
+ ~ build/ow17/makefile:
+ ~ build/vc10.x64/makefile:
+ ~ build/vc10/makefile:
+ ~ build/vc42/makefile:
+ ~ build/vc5/makefile:
+ ~ build/vc6/makefile:
+ ~ build/vc7/makefile:
+ ~ build/vc71/makefile:
+ ~ build/vc8.x64/makefile:
+ ~ build/vc8/makefile:
+ ~ build/vc9.x64/makefile:
+ ~ build/vc9/makefile:
+    ~ reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+13th August 2010 - 1.8.5
+========================
+
+Summary:
+--------
+
+ * gettimeofday() now returns int (instead of void)
+ * added VC++ 10 implicit-link support
+
+Details:
+--------
+
+General:
+
+ ~ include/sys/time.h:
+ ~ src/time.c:
+    ~ gettimeofday() now returns int (instead of void)
+
+ ~ include/unixem/implicit_link.h:
+    + now supports VC++ 10
+
+Distribution:
+
+Makefiles / Project-files:
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+4th April 2010 - 1.8.4
+======================
+
+Summary:
+--------
+
+ * fixed erroneous library name in implicit link file
+ * added VC++ 10 support
+
+Details:
+--------
+
+General:
+
+ ~ include/unixem/implicit_link.h:
+    ~ fixed erroneous library name in implicit link file
+
+Distribution:
+
+Makefiles / Project-files:
+
+ + build/vc10.x64/makefile:
+ + build/vc10/makefile:
+    + added VC++ 10 support
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+6th February 2010 - 1.8.3
+=========================
+
+Summary:
+--------
+
+ * refactored headers to resolve conflict(s) between unistd.h and winsock(2).h withouth using #define to prevent subsequent inclusion of winsock(2).h
+ * added empty (placeholder) files: arpa/inet.h, netinet/in.h, sys/socket.h
+ * fixed _M_X86 implicit link defect
+ * added implicit link support for Borland 5.9+, 6.1+ and Intel C/C++ 9, 10, 11
+ * changed library name/implicit link directives for VC++ x64/IA64 targets
+ * added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+ * various other minor changes
+
+Details:
+--------
+
+General:
+
+ ~ include/arpa/inet.h:
+ ~ include/netinet/in.h:
+ ~ include/sys/socket.h:
+    + added empty (placeholder) files
+
+ ~ include/sys/time.h:
+    ~ now implemented in terms of unixem/internal/winsock.h
+
+ ~ include/unistd.h:
+    ~ updated version
+    ~ now controls conflict between unistd.h and winsock(2).h without using #define to prevent subsequent inclusion of winsock(2).h
+
+ ~ include/unixem/implicit_link.h:
+    + implicit link support for Borland 5.9+ and 6.1+
+    + implicit link support for Intel C/C++ 9, 10, 11
+    ~ implicit link to new name for VC++ x64/IA64 targets
+    ~ fixed _M_X86 blooper
+
+ ~ include/unixem/internal/winsock.h:
+    + unixem/internal/winsock.h
+
+ ~ src/hostname.c:
+    ~ changed calling convention of unixem_gethostname()
+
+Distribution:
+
+Makefiles / Project-files:
+
+ ~ build/bc55/makefile:
+ ~ build/bc551/makefile:
+ ~ build/bc56/makefile:
+ ~ build/bc564/makefile:
+ ~ build/bc582/makefile:
+ ~ build/ow12/makefile:
+ ~ build/ow13/makefile:
+ ~ build/ow14/makefile:
+ ~ build/ow15/makefile:
+ ~ build/ow16/makefile:
+ ~ build/ow17/makefile:
+    + added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+    ~ -+ librarian to +
+
+ ~ build/bc59x/makefile:
+ ~ build/bc61x/makefile:
+    + added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+    + added support for Borland 5.9 and 6.1
+
+ ~ build/icl10/makefile:
+ ~ build/icl11/makefile:
+ ~ build/icl9/makefile:
+    + added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+    + added support for Intel 9, 10, 11
+
+ ~ build/ar/makefile:
+ ~ build/como433/makefile:
+ ~ build/cw7/makefile:
+ ~ build/cw8/makefile:
+ ~ build/dm/makefile:
+ ~ build/gcc295/makefile:
+ ~ build/gcc32/makefile:
+ ~ build/gcc33/makefile:
+ ~ build/gcc34/makefile:
+ ~ build/icl10/makefile:
+ ~ build/icl11/makefile:
+ ~ build/icl6/makefile:
+ ~ build/icl7/makefile:
+ ~ build/icl8/makefile:
+ ~ build/icl9/makefile:
+ ~ build/vc42/makefile:
+ ~ build/vc5/makefile:
+ ~ build/vc6/makefile:
+ ~ build/vc7/makefile:
+ ~ build/vc71/makefile:
+ ~ build/vc8/makefile:
+ ~ build/vc9/makefile:
+    + added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+
+ ~ build/vc8.x64/makefile:
+ ~ build/vc9.x64/makefile:
+    + added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+    ~ new names for VC++ x64/IA64 targets
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+13th May 2008 - 1.8.2
+=====================
+
+Summary:
+--------
+
+ * Win64 compatibility
+
+Details:
+--------
+
+General:
+
+ - unlink is now left to the version provided with the VC++ RTL
+ ~ mman.h now 64-bit compatible
+
+ + implicit link compatibility with vc8 and vc9
+
+Distribution:
+
+Makefiles / Project-files:
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+22nd April 2008 - 1.8.1
+=======================
+
+Summary:
+--------
+
+ * added gethostname()
+ * added getpid()
+ * changed 2nd param of gettimeofday() to void*
+ * improved semantics for glob() when a pattern search in an
+   existing directory matches no entries
+
+Details:
+--------
+
+General:
+
+ + gethostname() (in unistd.h and src/hostname.c)
+ + added getpid() (in unistd.h and src/unistd.c)
+ ~ changed 2nd param of gettimeofday() to void*
+ ~ improved semantics for glob() when a pattern search in an
+   existing directory matches no entries
+
+Distribution:
+
+Makefiles / Project-files:
+
+ + hostname.c
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+20th April 2008 - 1.7.5
+=======================
+
+Summary:
+--------
+
+ * the distribution is now rooted at unixem-1.7.5/
+ * makefiles for VC++ 8 & 9 
+ * implicit linking for Borland C/C++ 5.82
+ * implicit linking for VC++ 9
+ * bundles shwild 0.9.13
+ * bundles xTests 0.6.1
+
+Details:
+--------
+
+General:
+
+ + implicit linking for Borland C/C++ 5.82
+ + implicit linking for VC++ 9
+
+Distribution:
+
+ ~ the distribution is now rooted at unixem-1.7.5/
+
+Makefiles / Project-files:
+
+ + makefiles for VC++ 8 & 9
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+24th February 2008 - 1.7.4
+==========================
+
+Summary:
+--------
+
+ * include/unixem/internal/safestr.h
+ * safe string library for src/glob.c
+ * improved handling of offsets and errors in src/mmap.c
+ * safe string library for src/setenv.c
+ * fixed bug in gettimeofday(), which was showing local time, rather
+   than the required system time
+
+Details:
+--------
+
+General:
+
+ + include/unixem/internal/safestr.h
+
+ ~ safe string library for src/glob.c
+ ~ improved handling of offsets and errors in src/mmap.c
+ ~ safe string library for src/setenv.c
+ ~ fixed bug in gettimeofday(), which was showing local time, rather
+   than the required system time
+
+Distribution:
+
+Makefiles / Project-files:
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+12th March 2007 - 1.7.3
+=======================
+
+Summary:
+--------
+
+ * fixed gettimeofday() - was returning local and not system time
+ * library now compatible with Secure Library string functions
+
+Details:
+--------
+
+General:
+
+ ~ fixed gettimeofday() - was returning local and not system time
+ ~ library now compatible with Secure Library string functions
+
+Distribution:
+
+Makefiles / Project-files:
+
+Examples:
+
+Test:
+
+Test.Unit:
+
+Test.Component:
+
+Test.Scratch:
+
+Depends on:
+
+
+
+
+=============================== End of file ================================

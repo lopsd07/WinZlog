@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9AA99D3-0C56-440F-953F-795E5459829D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zlog_l</RootNamespace>
+    <ProjectName>zlog</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\WorkSpace\Code\zlog\extlib\Pre-built.2\include;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\WorkSpace\Code\zlog\extlib\Pre-built.2\lib\x86;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+    <TargetExt>.dll</TargetExt>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <IncludePath>..\extlib\unixem-1.9.1\include;D:\WorkSpace\Code\zlog\extlib\Pre-built.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\extlib\Pre-built.2\lib\x86;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>pthreadVSE2.lib;unixem.vc10.dll.debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>zlog.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>move $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)dll\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>zlog.def</ModuleDefinitionFile>
+      <AdditionalDependencies>pthreadVSE2.lib;unixem.vc10.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)\..\Release\dll
+copy $(OutDir)$(TargetName).lib $(SolutionDir)\..\Release\lib
+move $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)\dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\test\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+    <None Include="zlog.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\buf.h" />
+    <ClInclude Include="src\category.h" />
+    <ClInclude Include="src\category_table.h" />
+    <ClInclude Include="src\conf.h" />
+    <ClInclude Include="src\event.h" />
+    <ClInclude Include="src\fmacros.h" />
+    <ClInclude Include="src\format.h" />
+    <ClInclude Include="src\level.h" />
+    <ClInclude Include="src\level_list.h" />
+    <ClInclude Include="src\mdc.h" />
+    <ClInclude Include="src\record.h" />
+    <ClInclude Include="src\record_table.h" />
+    <ClInclude Include="src\release.h" />
+    <ClInclude Include="src\rotater.h" />
+    <ClInclude Include="src\rule.h" />
+    <ClInclude Include="src\spec.h" />
+    <ClInclude Include="src\syslog.h" />
+    <ClInclude Include="src\thread.h" />
+    <ClInclude Include="src\thread_list.h" />
+    <ClInclude Include="src\zc_arraylist.h" />
+    <ClInclude Include="src\zc_defs.h" />
+    <ClInclude Include="src\zc_hashtable.h" />
+    <ClInclude Include="src\zc_profile.h" />
+    <ClInclude Include="src\zc_util.h" />
+    <ClInclude Include="src\zc_xplatform.h" />
+    <ClInclude Include="src\zlog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\buf.c" />
+    <ClCompile Include="src\category.c" />
+    <ClCompile Include="src\category_table.c" />
+    <ClCompile Include="src\conf.c" />
+    <ClCompile Include="src\event.c" />
+    <ClCompile Include="src\format.c" />
+    <ClCompile Include="src\level.c" />
+    <ClCompile Include="src\level_list.c" />
+    <ClCompile Include="src\mdc.c" />
+    <ClCompile Include="src\record.c" />
+    <ClCompile Include="src\record_table.c" />
+    <ClCompile Include="src\release.c" />
+    <ClCompile Include="src\rotater.c" />
+    <ClCompile Include="src\rule.c" />
+    <ClCompile Include="src\spec.c" />
+    <ClCompile Include="src\syslog-client.c" />
+    <ClCompile Include="src\thread.c" />
+    <ClCompile Include="src\thread_list.c" />
+    <ClCompile Include="src\win_compat.c" />
+    <ClCompile Include="src\zc_arraylist.c" />
+    <ClCompile Include="src\zc_hashtable.c" />
+    <ClCompile Include="src\zc_profile.c" />
+    <ClCompile Include="src\zc_util.c" />
+    <ClCompile Include="src\zlog.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

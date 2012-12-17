@@ -1,0 +1,19 @@
+LIBRARY
+EXPORTS
+   zlog_init
+   zlog_reload
+   zlog_fini
+   zlog_profile
+   zlog_get_category
+   zlog_put_mdc
+   zlog_get_mdc
+   zlog_remove_mdc
+   zlog_clean_mdc
+   zlog
+   vzlog
+   hzlog
+   dzlog_init
+   dzlog_set_category
+   dzlog
+   vdzlog
+   hdzlog

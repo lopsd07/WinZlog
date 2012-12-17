@@ -1,0 +1,85 @@
+UNIXem - History
+================
+
+Updated:    13th August 2010
+
+
+12th August 2010 - 1.9.1
+------------------------
+
+ * reworked the API such that all functions are prefixed with unixem_(), and defined to the UNIX functions via macros
+ * 64-bit compatibility fixes
+
+
+13th August 2010 - 1.8.5
+------------------------
+
+ * gettimeofday() now returns int (instead of void)
+ * added VC++ 10 implicit-link support
+
+
+4th April 2010 - 1.8.4
+----------------------
+
+ * fixed erroneous library name in implicit link file
+ * added VC++ 10 support
+
+
+6th February 2010 - 1.8.3
+-------------------------
+
+ * refactored headers to resolve conflict(s) between unistd.h and winsock(2).h withouth using #define to prevent subsequent inclusion of winsock(2).h
+ * added empty (placeholder) files: arpa/inet.h, netinet/in.h, sys/socket.h
+ * fixed _M_X86 implicit link defect
+ * added implicit link support for Borland 5.9+, 6.1+ and Intel C/C++ 9, 10, 11
+ * changed library name/implicit link directives for VC++ x64/IA64 targets
+ * added Synesis-standard make targets: compile.libs.core, compile.libs, compile, build.libs.core, build.libs, build
+ * various other minor changes
+
+
+13th May 2008 - 1.8.2
+---------------------
+
+ * Win64 compatibility
+
+
+22nd April 2008 - 1.8.1
+-----------------------
+
+ * added gethostname()
+ * added getpid()
+ * changed 2nd param of gettimeofday() to void*
+ * improved semantics for glob() when a pattern search in an
+   existing directory matches no entries
+
+
+20th April 2008 - 1.7.5
+-----------------------
+
+ * the distribution is now rooted at unixem-1.7.5/
+ * makefiles for Visual C++ 8 & 9 
+ * implicit linking for Borland C/C++ 5.82
+ * implicit linking for VC++ 9
+ * bundles shwild 0.9.13
+ * bundles xTests 0.6.1
+
+
+24th February 2008 - 1.7.4
+--------------------------
+
+ * include/unixem/internal/safestr.h
+ * safe string library for src/glob.c
+ * improved handling of offsets and errors in src/mmap.c
+ * safe string library for src/setenv.c
+ * fixed bug in gettimeofday(), which was showing local time, rather
+   than the required system time
+
+
+12th March 2007 - 1.7.3
+-----------------------
+
+ * fixed gettimeofday() - was returning local and not system time
+ * library now compatible with Secure Library string functions
+
+
+=============================== End of file ================================

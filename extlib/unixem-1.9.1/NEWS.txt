@@ -1,0 +1,53 @@
+UNIXem - News
+=============
+
+Updated:    13th August 2010
+
+
+
+News:
+
+  13th Aug 2010     -   UNIXem 1.9.1 released
+
+  13th Aug 2010     -   UNIXem 1.8.5 released
+
+  4th Apr 2010      -   UNIXem 1.8.4 released
+
+  6th Feb 2010      -   UNIXem 1.8.3 released
+
+  13th May 2008     -   UNIXem 1.8.2 released
+
+  22nd Apr 2008     -   UNIXem 1.8.1 released
+
+  20th Apr 2008     -   UNIXem 1.7.5 released
+
+  24th Feb 2008     -   UNIXem 1.7.4 released
+
+  12th Mar 2007     -   UNIXem 1.7.3 released
+
+  12th Sep 2006     -   UNIXem 1.7.2 released
+
+  3rd Sep 2006      -   UNIXem 1.7.1 released
+
+  12th Aug 2006     -   UNIXem 1.5.2 released
+
+  21st Sep 2005     -   UNIXem 1.5.1 released
+
+  19th Jun 2005     -   UNIXem 1.5.3 released
+
+  23rd May 2005     -   UNIXem 1.5.2 released
+
+  17th Feb 2005     -   UNIXem 1.5.1 released
+
+  29th Jun 2004     -   UNIXem 1.4 released
+
+  16th Jun 2004     -   UNIXem 1.3 released
+
+  3rd Jan 2004      -   UNIXem 1.2 released
+
+  2nd Nov 2003      -   UNIXem 1.1 released
+
+  2nd Feb 2003      -   UNIXem 1.0 released
+
+
+=============================== End of file ================================
