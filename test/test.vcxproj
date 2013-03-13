@@ -43,13 +43,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\zlog\src;$(IncludePath)</IncludePath>
-    <LibraryPath>..\zlog\dll;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\zlog\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)dll\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\WorkSpace\Code\zlog\zlog\src;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\WorkSpace\Code\zlog\zlog\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\zlog\src;$(IncludePath)</IncludePath>
+    <LibraryPath>..\zlog\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)dll\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -40,8 +40,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\WorkSpace\Code\zlog\extlib\Pre-built.2\include;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\WorkSpace\Code\zlog\extlib\Pre-built.2\lib\x86;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\extlib\Pre-built.2\include;..\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\extlib\Pre-built.2\lib\x86;..\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
@@ -51,8 +51,8 @@
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)</TargetName>
     <TargetExt>.dll</TargetExt>
-    <IncludePath>..\extlib\unixem-1.9.1\include;D:\WorkSpace\Code\zlog\extlib\Pre-built.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\extlib\Pre-built.2\lib\x86;D:\WorkSpace\Code\zlog\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\extlib\unixem-1.9.1\include;..\extlib\Pre-built.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\extlib\Pre-built.2\lib\x86;..\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
