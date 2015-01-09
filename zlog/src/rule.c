@@ -428,22 +428,27 @@ static int zlog_rule_output_dynamic_record(zlog_rule_t * a_rule, zlog_thread_t *
 static int zlog_rule_output_stdout(zlog_rule_t * a_rule,
 				   zlog_thread_t * a_thread)
 {
+	int iRet;
 #if _MSC_VER
-long lStdOut = _fileno(stdout);
+//long lStdOut = _fileno(stdout);
+HANDLE lStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 #else
 long lStdOut = STDOUT_FILENO;
 #endif
-
 	if (zlog_format_gen_msg(a_rule->format, a_thread)) {
 		zc_error("zlog_format_gen_msg fail");
 		return -1;
 	}
-
-
-	if (zlogwrite(lStdOut,
-		zlog_buf_str(a_thread->msg_buf), zlog_buf_len(a_thread->msg_buf)) < 0) {
-		zc_error("write fail, errno[%d]", errno);
-		return -1;
+// 	if (zlogwrite(lStdOut,
+// 		zlog_buf_str(a_thread->msg_buf), zlog_buf_len(a_thread->msg_buf)) < 0) {
+// 		zc_error("write fail, errno[%d]", errno);
+// 		return -1;
+// 	}
+	iRet = zlogwrite(lStdOut,
+		zlog_buf_str(a_thread->msg_buf), zlog_buf_len(a_thread->msg_buf));
+	if ( iRet< 0) {
+			zc_error("write fail[GLE=%d], errno[%d]",  GetLastError(), errno);
+			return -1;
 	}
 
 	return 0;
@@ -453,7 +458,8 @@ static int zlog_rule_output_stderr(zlog_rule_t * a_rule,
 				   zlog_thread_t * a_thread)
 {
 #if _MSC_VER
-long lStdErr = _fileno(stderr);
+//long lStdErr = _fileno(stderr);
+HANDLE lStdErr = GetStdHandle(STD_ERROR_HANDLE);
 #else
 long lStdErr = STDERR_FILENO;
 #endif

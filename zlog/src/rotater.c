@@ -88,7 +88,7 @@ void zlog_rotater_del(zlog_rotater_t *a_rotater)
 	if (a_rotater->lock_fd) {
 #ifdef _MSC_VER
 		if (CloseHandle(a_rotater->lock_fd)) {
-			zc_error("close fail, errno[%d]", errno);
+			zc_error("close fail[%s], errno[%d]", a_rotater->lock_file, GetLastError());
 		}
 #else
 		if (close(a_rotater->lock_fd)) {
@@ -155,7 +155,7 @@ zlog_rotater_t *zlog_rotater_new(char *lock_file)
 			(GENERIC_READ|GENERIC_WRITE),
 			(FILE_SHARE_READ|FILE_SHARE_WRITE),
 			NULL,OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
-	zc_error("opened");
+	zc_debug("opened");
 	if (fd <= 0) {
 		zc_error("open file[%s] fail, errno[%d]", lock_file, errno);
 		goto err;

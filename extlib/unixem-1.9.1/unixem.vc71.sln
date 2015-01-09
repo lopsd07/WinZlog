@@ -1,15 +1,19 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unixem", "build\vc71\unixem.vcxproj", "{8F2B317D-8E7E-CE81-9565-2825D9A7DB18}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unixem", "build\vc71\unixem.vcxproj", "{39EFF1C6-54A8-2E5A-7041-25609C6DEF35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8F2B317D-8E7E-CE81-9565-2825D9A7DB18}.Debug|Win32.ActiveCfg = Debug|Win32
-		{8F2B317D-8E7E-CE81-9565-2825D9A7DB18}.Release|Win32.ActiveCfg = Release|Win32
+		{39EFF1C6-54A8-2E5A-7041-25609C6DEF35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{39EFF1C6-54A8-2E5A-7041-25609C6DEF35}.Debug|x64.ActiveCfg = Debug|x64
+		{39EFF1C6-54A8-2E5A-7041-25609C6DEF35}.Release|Win32.ActiveCfg = Release|Win32
+		{39EFF1C6-54A8-2E5A-7041-25609C6DEF35}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
