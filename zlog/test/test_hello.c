@@ -25,7 +25,9 @@ int main(int argc, char** argv)
 	int rc;
 	zlog_category_t *zc;
 
-	rc = zlog_init(".\\test_hello.conf");
+	//rc = zlog_init(".\\test_hello.conf");
+	rc = zlog_init("");
+	
 	if (rc) {
 		printf("init failed\n");
 		return -1;

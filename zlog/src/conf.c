@@ -49,7 +49,11 @@
 #define ZLOG_CONF_DEFAULT_FILE_PERMS 0600
 #define ZLOG_CONF_DEFAULT_RELOAD_CONF_PERIOD 0
 #define ZLOG_CONF_DEFAULT_FSYNC_PERIOD 0
+#ifdef _MSC_VER
+#define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "d:/tmp/zlog.lock"
+#else
 #define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "/tmp/zlog.lock"
+#endif
 /*******************************************************************************/
 
 void zlog_conf_profile(zlog_conf_t * a_conf, int flag)
@@ -110,6 +114,19 @@ void zlog_conf_del(zlog_conf_t * a_conf)
 
 static int zlog_conf_build_without_file(zlog_conf_t * a_conf);
 static int zlog_conf_build_with_file(zlog_conf_t * a_conf);
+static int file_exists(const char * filename);
+
+
+static int file_exists(const char *filename)
+{
+	FILE * file = fopen(filename, "r");
+	if (file)
+	{
+		fclose(file);
+		return 1;
+	}
+	return 0;
+}
 
 zlog_conf_t *zlog_conf_new(const char *confpath)
 {
@@ -123,7 +140,7 @@ zlog_conf_t *zlog_conf_new(const char *confpath)
 		return NULL;
 	}
 
-	if (confpath && confpath[0] != '\0') {
+	if (confpath && confpath[0] != '\0' && file_exists (confpath)) {
 		nwrite = snprintf(a_conf->file, sizeof(a_conf->file), "%s", confpath);
 		has_conf_file = 1;
 	} else if (getenv("ZLOG_CONF_PATH") != NULL) {

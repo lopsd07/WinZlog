@@ -31,3 +31,5 @@ _testmain.go
 *.pdb
 *.idb
 *.lastbuildstate
+*.suo
+*.exp
