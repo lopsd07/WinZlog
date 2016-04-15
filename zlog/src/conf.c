@@ -50,11 +50,13 @@
 #define ZLOG_CONF_DEFAULT_RELOAD_CONF_PERIOD 0
 #define ZLOG_CONF_DEFAULT_FSYNC_PERIOD 0
 #ifdef _MSC_VER
-#define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "d:/tmp/zlog.lock"
+#define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "zlog.lock"
 #else
-#define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "/tmp/zlog.lock"
+#define ZLOG_CONF_BACKUP_ROTATE_LOCK_FILE "zlog.lock"
 #endif
 /*******************************************************************************/
+
+zlog_conf_t *zlog_env_conf;
 
 void zlog_conf_profile(zlog_conf_t * a_conf, int flag)
 {
