@@ -70,7 +70,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\extlib\Pre-built.2\include;..\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\extlib\Pre-built.2\lib\x86;..\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\extlib\Pre-built.2\lib\x86;..\extlib\unixem-1.9.1\lib\x86\Release;$(LibraryPath)</LibraryPath>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
@@ -78,7 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\extlib\Pre-built.2\include;..\extlib\unixem-1.9.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\extlib\Pre-built.2\lib\x86;..\extlib\unixem-1.9.1\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\extlib\Pre-built.2\lib\x64;..\extlib\unixem-1.9.1\lib\x64\Release;$(LibraryPath)</LibraryPath>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
@@ -111,7 +111,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>pthreadVSE2.lib;unixem.vc10.dll.debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>pthreadVSE2.lib;unixem.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>zlog.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
@@ -129,7 +129,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>pthreadVSE2.lib;unixem.vc10.dll.debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>pthreadVC2.lib;unixem.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>zlog.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
