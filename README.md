@@ -3,15 +3,14 @@ WinZlog
 
 ##Zlog on Windows
 
-ÔÚzlog Linux°æhttps://github.com/HardySimpson/zlog
+- The original Linux version https://github.com/HardySimpson/zlog
+- This repo based on the WinZlog https://github.com/lopsd07/WinZlog
 
-ºÍWindowsÉÏµÄÒÆÖ²https://github.com/pattheaux/zlog
+I have fixed an crash issue and upgrade the solution to `Visual Studio 2015`.   
 
-µÄ»ù´¡ÉÏÊ¹ÓÃVS2010½¨Á¢µÄÍêÕû¹¤³Ì¡£
+Releaseæ–‡ä»¶å¤¹ä¸‹æœ‰VS2015ç¼–è¯‘ç”Ÿæˆçš„`.lib`å’Œ`.dll`åŠzlogå¤´æ–‡ä»¶å¯ä»¥æ ¹æ®zlogæ–‡æ¡£ç›´æ¥åœ¨ä½¿ç”¨ã€‚
 
-ReleaseÎÄ¼ş¼ĞÏÂÓĞVS2010±àÒëÉú³ÉµÄ.libºÍ.dll¼°zlogÍ·ÎÄ¼ş¿ÉÒÔ¸ù¾İzlogÎÄµµÖ±½ÓÔÚÊ¹ÓÃ¡£
-
-±àÒë¹¤³ÌÒÀÀµÁ½¸ö¿â£º
+ç¼–è¯‘å·¥ç¨‹ä¾èµ–ä¸¤ä¸ªåº“ï¼š
 
 Requires the glob function from the Unixem project: 
 http://synesis.com.au/software/unixem.html 
@@ -21,37 +20,37 @@ http://www.sourceware.org/pthreads-win32/
 
 Project tree
 
-    ©À©¤extlib  Requires libs
-    ©¦  ©À©¤Pre-built.2
-    ©¦  ©¦  ©À©¤dll
-    ©¦  ©¦  ©¦  ©À©¤x64
-    ©¦  ©¦  ©¦  ©¸©¤x86
-    ©¦  ©¦  ©À©¤include
-    ©¦  ©¦  ©¸©¤lib
-    ©¦  ©¦      ©À©¤x64
-    ©¦  ©¦      ©¸©¤x86
-    ©¦  ©¸©¤unixem-1.9.1
-    ©¦      ©À©¤build
-    ©¦      ©À©¤doc
-    ©¦      ©¦  ©¸©¤html
-    ©¦      ©¦      ©¸©¤1.9.1
-    ©¦      ©À©¤include
-    ©¦      ©À©¤include_error
-    ©¦      ©À©¤lib
-    ©¦      ©À©¤src
-    ©¦      ©¦  ©¸©¤internal
-    ©¦      ©¸©¤test
-    ©À©¤Release  VS2010 output .lib .dll and zlog include file
-    ©¦  ©À©¤bin
-    ©¦  ©À©¤demo
-    ©¦  ©À©¤head
-    ©¦  ©¸©¤lib
-    ©À©¤test   
-    ©¸©¤zlog   VS2010 Project
-    ©À©¤bin
-    ©À©¤doc
-    ©À©¤lib
-    ©À©¤Release
-    ©À©¤src
-    ©À©¤test
-    ©¸©¤tools
+    â”œâ”€extlib  Requires libs
+    â”‚  â”œâ”€Pre-built.2
+    â”‚  â”‚  â”œâ”€dll
+    â”‚  â”‚  â”‚  â”œâ”€x64
+    â”‚  â”‚  â”‚  â””â”€x86
+    â”‚  â”‚  â”œâ”€include
+    â”‚  â”‚  â””â”€lib
+    â”‚  â”‚      â”œâ”€x64
+    â”‚  â”‚      â””â”€x86
+    â”‚  â””â”€unixem-1.9.1
+    â”‚      â”œâ”€build
+    â”‚      â”œâ”€doc
+    â”‚      â”‚  â””â”€html
+    â”‚      â”‚      â””â”€1.9.1
+    â”‚      â”œâ”€include
+    â”‚      â”œâ”€include_error
+    â”‚      â”œâ”€lib
+    â”‚      â”œâ”€src
+    â”‚      â”‚  â””â”€internal
+    â”‚      â””â”€test
+    â”œâ”€Release  VS2010 output .lib .dll and zlog include file
+    â”‚  â”œâ”€bin
+    â”‚  â”œâ”€demo
+    â”‚  â”œâ”€head
+    â”‚  â””â”€lib
+    â”œâ”€test   
+    â””â”€zlog   VS2010 Project
+    â”œâ”€bin
+    â”œâ”€doc
+    â”œâ”€lib
+    â”œâ”€Release
+    â”œâ”€src
+    â”œâ”€test
+    â””â”€tools
