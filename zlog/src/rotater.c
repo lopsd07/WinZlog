@@ -442,7 +442,8 @@ static int zlog_rotater_parse_archive_path(zlog_rotater_t * a_rotater)
 			return -1;
 		}
 
-		sscanf(p, "#%d%n", &(a_rotater->num_width), &nread);
+		nread = 0;	/* sscanf may not initialize this `nread`*/
+		int ret = sscanf(p, "#%d%n", &(a_rotater->num_width), &nread);
 		if (nread == 0) nread = 1;
 		if (*(p+nread) == 'r') {
 			a_rotater->mv_type = ROLLING;
