@@ -1,9 +1,14 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlog", "zlog.vcxproj", "{F9AA99D3-0C56-440F-953F-795E5459829D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\test\test.vcxproj", "{813831EE-3093-4707-851E-D881DDE92B4C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9AA99D3-0C56-440F-953F-795E5459829D} = {F9AA99D3-0C56-440F-953F-795E5459829D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
