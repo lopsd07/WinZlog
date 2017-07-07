@@ -25,6 +25,9 @@
 #include "zc_hashtable.h"
 #include "zc_xplatform.h"
 #include "zc_util.h"
+
+#if _MSC_VER < 1900	//vs2015 already have this function
 #define snprintf _snprintf_s 
+#endif
 
 #endif
