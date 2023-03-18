@@ -19,14 +19,17 @@
 
 #include <stdio.h>
 #include "zlog.h"
+#include <Windows.h>
 
 int main(int argc, char** argv)
 {
 	int rc;
 	zlog_category_t *zc;
+	getchar();
 
-	//rc = zlog_init(".\\test_hello.conf");
-	rc = zlog_init("");
+	rc = zlog_init("test_hello.conf");
+	
+	//rc = zlog_init("");
 	
 	if (rc) {
 		printf("init failed\n");
@@ -39,10 +42,15 @@ int main(int argc, char** argv)
 		zlog_fini();
 		return -2;
 	}
+	while(1)
+	{
+	zlog_info(zc, "hello,加点中文咯 zlog");
+	//Sleep(10);
+	};
 
-	zlog_info(zc, "hello, zlog");
 
 	zlog_fini();
+	getchar();
 	getchar();
 	
 	return 0;

@@ -35,8 +35,8 @@
 #define MAXLEN_PATH 1024
 #define MAXLEN_CFG_LINE (MAXLEN_PATH * 4)
 
-#define FILE_NEWLINE "\n"
-#define FILE_NEWLINE_LEN 1
+#define FILE_NEWLINE "\r\n"
+#define FILE_NEWLINE_LEN 2
 
 #include <string.h>
 #ifndef _MSC_VER
