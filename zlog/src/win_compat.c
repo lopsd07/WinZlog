@@ -35,7 +35,13 @@ SYSTEMTIME st;
 }
 
 int fsync(FILE *fp) {
-  return(fflush(fp));
+  //return(fflush(fp));
+  	if (!FlushFileBuffers(fp))
+    {
+        CloseHandle(fp);
+		return 1;
+    }
+	return 0;
 }
 
 #endif

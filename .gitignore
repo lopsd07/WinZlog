@@ -33,3 +33,14 @@ _testmain.go
 *.lastbuildstate
 *.suo
 *.exp
+
+Release/bin/x64/zlog.dll
+Release/bin/zlog.dll
+Release/lib/
+zlog/bin/x64/zlog.dll
+zlog/bin/zlog.dll
+zlog/x64/Release/zlog.dll
+zlog/x64/Release/zlog.lib
+zlog/x86/Release/zlog.dll
+zlog/x86/Release/zlog.lib
+zlog/x86/Release/zlog.vcxprojResolveAssemblyReference.cache
